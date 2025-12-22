@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - RTX Computers</title>
+      <link rel="icon" href="Images/photo_2025-11-26_06-28-21.png" type="image/x-icon" />
+<script src="https://kit.fontawesome.com/b3570f4c74.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #0f0f0f;
+            --bg-panel: #1d1d1d;
+            --accent-green: #16ff00;
+            --text-main: #ffffff;
+            --text-sub: #9bd67d;
+            --border-col: #333;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: razer , sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; }
+
+        nav { 
+            background-color: var(--bg-panel); 
+            padding: 1rem 2rem; 
+            border-bottom: 2px solid var(--accent-green); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--accent-green); text-decoration: none; }
+
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+
+        /* The Main Checkout Panel */
+        .checkout-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .panel {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border-col);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        h2 { color: var(--accent-green); margin-bottom: 1.5rem; font-size: 1.4rem; text-transform: uppercase; border-bottom: 1px solid var(--border-col); padding-bottom: 10px; }
+
+        /* Product Visibility Styles */
+        .summary-item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 1rem;
+            background: #000;
+            border-left: 4px solid var(--accent-green);
+            border-radius: 4px;
+        }
+        .prod-label { color: var(--text-sub); font-size: 0.8rem; text-transform: uppercase; }
+        .prod-name { font-size: 1.5rem; font-weight: bold; }
+        .prod-price { font-size: 1.8rem; color: var(--accent-green); font-weight: bold; }
+
+        /* Form Styles */
+        .form-group { margin-bottom: 1.2rem; }
+        label { display: block; margin-bottom: 5px; color: #ccc; font-size: 0.9rem; }
+        input {
+            width: 100%; padding: 12px;
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-col);
+            color: #fff; border-radius: 6px; outline: none;
+        }
+        input:focus { border-color: var(--accent-green); }
+
+        .btn-confirm {
+            width: 100%; padding: 15px;
+            background-color: var(--accent-green);
+            color: #000; border: none; border-radius: 6px;
+            font-weight: bold; font-size: 1.1rem; cursor: pointer;
+            transition: 0.3s; margin-top: 1rem;
+        }
+        .btn-confirm:hover { background-color: #12cc00; box-shadow: 0 0 15px rgba(22, 255, 0, 0.3); }
+
+        @media (max-width: 768px) { .checkout-layout { grid-template-columns: 1fr; } }
+    </style>
+<link rel="stylesheet" href="Global.css">
+
+</head>
+<body>
+ <header>
+    <div class="container1" id="logo">
+
+      <div class="header0">
+        <a class="logo-text" href="index.html">RTX</a>
+        <span class="store-text">-Store</span>
+      </div>
+
+    </div>
+  
+
+ <nav class="navbar">
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="products.html">Our Products</a></li>
+    <li><a href="services.html">Our Services</a></li>
+    <li><a href="contact.html">Contact us</a></li>
+    <li><a href="about.html">About Us</a></li>
+  </ul>
+</nav>
+
+  </header>
+    <div class="container">
+        <div class="checkout-layout">
+            
+            <div class="panel">
+                <h2>Order Summary</h2>
+                <div class="summary-item">
+                    <span class="prod-label">Product Selected</span>
+                    <div id="display-name" class="prod-name">No product selected</div>
+                    
+                    <span class="prod-label">Total Price</span>
+                    <div id="display-price" class="prod-price">--</div>
+                </div>
+                <p style="margin-top: 20px; color: #888; font-size: 0.9rem;">
+                    * All products include a 1-year RTX Warranty.
+                </p>
+            </div>
+
+            <div class="panel">
+                <h2>Customer Info</h2>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="cust-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="cust-phone" placeholder="01xxxxxxxxx" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Shipping Address</label>
+                        <input type="text" id="cust-address" placeholder="Street, Building, City" required>
+                    </div>
+                    <button type="submit" class="btn-confirm">Complete Purchase</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+    <hr>
+    <div class="footer-content">
+      <h3>By RTX Team</h3>
+      <p>&copy; Copyright Reserved</p>
+     <div class="icons">
+      <a href="www.google.com/maps/" target="_blank " title="Go to our Maps Site" ><i class="fa-solid fa-location-dot fa-2xl"></i></a> 
+      <a href="www.instgram.com" target="_blank " title="Go to our Instgram account" ><i class="fa-brands fa-instagram fa-2xl"></i><a> 
+      <a href="www.facebook.com" target="_blank " title="Go to our Face book account" ><i class="fa-brands fa-facebook fa-2xl"></i></a>
+      <a href="www.youtube.com" target="_blank " title="Go to our youtube Chanell" ><i class="fa-brands fa-youtube fa-2xl"></i></a> 
+      <a href="www.twitch.com" target="_blank " title="Go to our twitch"><i class="fa-brands fa-twitch fa-2xl"></i></a> 
+     
+     </div> 
+<br>
+      <a href="mailto:krm0853">rtx99@hotmail.com</a>
+    </div>
+  </footer>
+
+    <script>
+        // 1. This is a simplified version of your products list 
+        // (Ensure the IDs match the ones in your Product-Details-Full.html)
+        const products = [
+            { id: 1, name: "NVIDIA RTX 4090", price: "$1,599" },
+            { id: 2, name: "NVIDIA RTX 4080 Super", price: "$999" },
+            { id: 3, name: "NVIDIA RTX 4070 Ti Super", price: "$799" },
+            { id: 4, name: "NVIDIA RTX 4060 Ti", price: "$399" },
+            { id: 5, name: "Intel Core i9-14900K", price: "$589" },
+            { id: 6, name: "Intel Core i7-14700K", price: "$409" },
+            { id: 7, name: "AMD Ryzen 9 7950X3D", price: "$699" },
+            { id: 8, name: "AMD Ryzen 7 7800X3D", price: "$449" }
+            // Add more here if needed
+        ];
+
+        // 2. Get the ID from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = parseInt(urlParams.get('id'));
+
+        // 3. Find the product and update the visibility
+        const foundProduct = products.find(p => p.id === productId);
+
+        if (foundProduct) {
+            document.getElementById('display-name').innerText = foundProduct.name;
+            document.getElementById('display-price').innerText = foundProduct.price;
+        } else {
+            document.getElementById('display-name').innerText = "Unknown Product";
+            document.getElementById('display-price').innerText = "N/A";
+        }
+
+        // 4. Form Submission
+        document.getElementById('checkoutForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('cust-name').value;
+            alert(`Thank you ${name}! Your order for ${foundProduct ? foundProduct.name : 'the product'} has been received.`);
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

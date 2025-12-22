@@ -1,0 +1,169 @@
+@font-face {
+    src: url(Fonts/Unispace/unispace.ttf);
+    font-family: unispace;
+  }
+
+  @font-face {
+    font-family: unispaceB;
+    src: url(Fonts/Unispace/unispace\ bd.ttf);
+
+  }
+
+  @font-face {
+    src: url(Fonts/RazerF5/RazerF5.ttf);
+    font-family: razer;
+  }
+
+  body {
+    background-color: #000000;
+    margin: 0;
+    color: white;
+    font-family: razer
+  }
+
+  ::selection {
+    color: #00ff00;
+    background-color: #000000;
+  }
+
+  header {
+
+
+    height: fit-content;
+    width: 100%;
+
+    background-color: #000000;
+    margin: 0%;
+margin-bottom: 10px;
+
+  }
+
+  .container1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .header0 {margin: 0%;
+    display: flex;
+    align-items: center;
+  }
+
+  .container1 a {
+    text-decoration: none;
+
+    color: #000000;
+    -webkit-text-stroke: 1px #41CE2A;
+
+
+    padding: 2px;
+    font-size: 90px;
+    letter-spacing: 5px;
+    margin: 0px;
+  }
+
+  .container1 a:hover {
+    background-color: #00ff00;
+    -webkit-text-stroke: 5px #000000;
+    color: #41CE2A;
+
+  }
+
+  .store-text {
+    letter-spacing: 5px;
+    margin-left: 6px;
+    font-size: 70px;
+    font-family: 'Unispace', sans-serif;
+    color: #000000;
+    padding: px;
+    -webkit-text-stroke: 1px #41CE2A;
+  }
+
+ /*
+  .search-bar {
+    background-color: #000000;
+    padding: 15px 30px;
+    border-radius: 100px;
+    border: 3px solid #1c860b;
+
+    width: 20%;
+    margin-left: auto;
+    font-size: 1.5em;
+    color: white;
+
+  }
+  */
+nav{
+   background-color: var(--bg-panel);
+            padding: 1rem 2rem;
+            border-bottom: 2px solid var(--accent-green);
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+}
+  .navbar ul {
+    list-style: none;
+    background-color: #313b31;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .navbar a {
+    color: rgb(240, 226, 226);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+
+  }
+
+  .navbar a:hover {
+    color: #000000;
+    background-color: hsl(120, 100%, 40%);
+  }
+
+  .navbar li {
+    float: left;
+  }
+  .navbar a.active {
+    color: hsl(120, 100%, 40%) ;
+   background-color: #000000;
+   
+    font-weight: bold;
+}
+footer a:hover{
+  color:  hsl(120, 100%, 40%) ;;
+}
+ .footer-content {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    border-top: 2px solid #00ff00;
+  }
+
+  .footer-content h3 {
+    font-size: 1.5rem;
+    color: #00ff00;
+    margin-bottom: 10px;
+  }
+
+  .footer-content p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+
+  .footer-content a {
+    font-size: 1rem;
+    color: #00ff00;
+    text-decoration: none;
+  }
+
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
+

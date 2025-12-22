@@ -1,0 +1,155 @@
+ :root {
+            --bg-dark: #0f0f0f;
+            --bg-panel: #1d1d1d;
+            --accent-green: #16ff00;
+            --text-main: #ffffff;
+            --text-sub: #9bd67d;
+            --border-col: #333;
+
+            /* Category Colors */
+            --col-gpu: #00d9ff;    
+            --col-cpu: #ff8c00;    
+            --col-mobo: #9d00ff;   
+            --col-case: #ff0037;   
+            --col-psu: #ffd900;    
+            --col-ram: #ff00d4;    
+            --col-storage: #00ff9d;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); }
+        a { text-decoration: none; color: inherit; }
+
+        /* --- NAVIGATION --- */
+      /*  nav {
+            background-color: var(--bg-panel);
+            padding: 1rem 2rem;
+            border-bottom: 2px solid var(--accent-green);
+            display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--accent-green); }
+        .nav-links a { margin-left: 20px; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent-green); }*/
+
+        /* --- HEADER & SEARCH --- */
+        .page-header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: radial-gradient(circle at center, #1a1a1a 0%, var(--bg-dark) 70%);
+        }
+
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 30px;
+            border: 2px solid var(--border-col);
+            background: var(--bg-panel);
+            color: #fff;
+            font-size: 1.1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .search-input:focus { border-color: var(--accent-green); box-shadow: 0 0 10px rgba(22, 255, 0, 0.2); }
+
+        /* --- CATEGORY FILTERS --- */
+        .category-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 3rem;
+            padding: 0 1rem;
+        }
+
+        .cat-btn {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-col);
+            color: #aaa;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+
+        .cat-btn:hover { color: #fff; border-color: #fff; }
+        .cat-btn.active { background: #fff; color: #000; border-color: #fff; transform: scale(1.05); }
+
+        /* Specific active colors for categories */
+        .cat-btn[data-cat="GPU"].active { background: var(--col-gpu); box-shadow: 0 0 15px var(--col-gpu); }
+        .cat-btn[data-cat="CPU"].active { background: var(--col-cpu); box-shadow: 0 0 15px var(--col-cpu); }
+        .cat-btn[data-cat="Mobo"].active { background: var(--col-mobo); box-shadow: 0 0 15px var(--col-mobo); }
+        .cat-btn[data-cat="Case"].active { background: var(--col-case); box-shadow: 0 0 15px var(--col-case); }
+        .cat-btn[data-cat="PSU"].active { background: var(--col-psu); box-shadow: 0 0 15px var(--col-psu); }
+        .cat-btn[data-cat="RAM"].active { background: var(--col-ram); box-shadow: 0 0 15px var(--col-ram); }
+        .cat-btn[data-cat="Storage"].active { background: var(--col-storage); box-shadow: 0 0 15px var(--col-storage); }
+
+         
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 2rem;
+            min-height: 400px;  
+        }
+
+        .card {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border-col);
+            border-left: 4px solid var(--border-col); 
+            border-radius: 12px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            position: relative;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .card:hover { transform: translateY(-7px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+
+        .card-type-tag {
+            position: absolute; top: 0; right: 0;
+            background: #333; color: #fff;
+            font-size: 0.75rem; padding: 5px 10px;
+            border-bottom-left-radius: 12px;
+            font-weight: bold; text-transform: uppercase;
+        }
+
+        .card-icon { font-size: 4rem; margin: 1rem 0; display: block; }
+        .card-brand { color: #888; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .card-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; color: #fff; }
+        .card-price { font-size: 1.3rem; color: #fff; font-weight: bold; margin-top: auto; }
+
+         
+        .card.cat-gpu { border-left-color: var(--col-gpu); } .card.cat-gpu .card-price { color: var(--col-gpu); }
+        .card.cat-cpu { border-left-color: var(--col-cpu); } .card.cat-cpu .card-price { color: var(--col-cpu); }
+        .card.cat-mobo { border-left-color: var(--col-mobo); } .card.cat-mobo .card-price { color: var(--col-mobo); }
+        .card.cat-case { border-left-color: var(--col-case); } .card.cat-case .card-price { color: var(--col-case); }
+        .card.cat-psu { border-left-color: var(--col-psu); } .card.cat-psu .card-price { color: var(--col-psu); }
+        .card.cat-ram { border-left-color: var(--col-ram); } .card.cat-ram .card-price { color: var(--col-ram); }
+        .card.cat-storage { border-left-color: var(--col-storage); } .card.cat-storage .card-price { color: var(--col-storage); }
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            color: #555;
+            font-size: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
