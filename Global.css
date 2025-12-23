@@ -11,7 +11,7 @@
 
   @font-face {
     src: url(Fonts/RazerF5/RazerF5.ttf);
-    font-family: razer;
+    font-family: razer;unispace ; monospace ;
   }
 
   body {
@@ -166,4 +166,5 @@ footer a:hover{
   .footer-content a:hover {
     text-decoration: underline;
   }
+
 
